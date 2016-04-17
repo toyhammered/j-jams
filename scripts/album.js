@@ -28,12 +28,30 @@ var albumMarconi = {
    ]
  };
 
+ var albumLedZeppelin = {
+    title: 'Houses of Holy',
+    artist: 'Led Zeppelin',
+    label: 'Atlantic Records',
+    year: '1973',
+    albumArtUrl: 'assets/images/album_covers/lz.jpg',
+    songs: [
+      { title: 'The Song Remains The Same', duration: '5:32' },
+      { title: 'The Rain Song', duration: '7:39' },
+      { title: 'Over the Hills and Far Away', duration: '4:50'},
+      { title: 'The Crunge', duration: '3:17' },
+      { title: 'Dancing Days', duration: '3:43'},
+      { title: 'D\'yer Mak\'er', duration: '4:23'},
+      { title: 'No Quarter', duration: '7:00'},
+      { title: 'The Ocean', duration: '4:31'}
+    ]
+  };
+
  var createSongRow = function(songNumber, songName, songLength) {
    var template =
           ' <tr class="album-view-song-item">'
-          +   '<td class="song-item-number">5</td>'
-          +   '<td class="song-item-title">Black</td>'
-          +   '<td class="song-item-duration">X:XX</td>'
+          +   '<td class="song-item-number">'+ songNumber + '</td>'
+          +   '<td class="song-item-title">'+ songName + '</td>'
+          +   '<td class="song-item-duration">'+ songLength +'</td>'
           + '</tr>'
           ;
           return template;
@@ -55,10 +73,20 @@ var albumMarconi = {
 
    for (var i = 0; i < album.songs.length; i++) {
      albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
-
    }
+ };
+
+  toggleAlbum = function(){
+   var albumImage = document.getElementsByClassName('album-cover-art')[0];
+   var albums = [albumPicasso, albumMarconi, albumLedZeppelin]
+   var theIndex = 1;
+   albumImage.addEventListener('click', function(){
+      setCurrentAlbum(albums[theIndex])
+      theIndex = (theIndex+1)%(albums.length);
+   });
  };
 
  window.onload = function() {
    setCurrentAlbum(albumPicasso)
+   toggleAlbum();
  };
