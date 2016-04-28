@@ -59,15 +59,28 @@ var albumMarconi = {
    }
  };
 
-var findParentByClassName = function(element, targetClass) {
-    if (element) {
-        var currentParent = element.parentElement;
-        while (currentParent.className != targetClass) {
-            currentParent = currentParent.parentElement;
-        }
-        return currentParent;
-    }
-};
+
+ var findParentByClassName = function(element, targetClass) {
+     if (element) {
+
+         if(element.parentElement === null){
+             alert("No Parent Found");
+             return false;
+         }
+         var currentParent = element.parentElement;
+
+
+         while (currentParent.className !== targetClass) {
+             currentParent = currentParent.parentElement;
+
+             if (currentParent === undefined) {
+                 alert("No parent found with that class name");
+                 return;
+             }
+         }
+         return currentParent;
+     }
+ };
 
 var getSongItem = function(element) {
     switch (element.className) {
