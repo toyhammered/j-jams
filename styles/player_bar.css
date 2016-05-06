@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 150px;
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 100;
 }
@@ -83,7 +83,7 @@
    font-size: 0.5rem;
  }
 
- .seek-control .currently-time {
+ .seek-control .current-time {
    position: absolute;
    top: 0.5rem;
  }
@@ -143,7 +143,7 @@
   vertical-align: middle;
 }
 
-.player-bar .volume. .seek-bar {
+.player-bar .volume .seek-bar {
   display: inline-block;
   width: 5.75rem;
   vertical-align: middle;
