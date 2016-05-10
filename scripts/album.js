@@ -18,7 +18,7 @@ var albumMarconi = {
    artist: 'Guglielmo Marconi',
    label: 'EM',
    year: '1909',
-   albumArtUrl: 'assets/images/album_covers/20.png',
+   albumArtUrl: 'assets/images/album_covers/19.png',
    songs: [
      { title: 'Hello, Operator?', duration: '1:01' },
      { title: 'Ring, ring, ring', duration: '5:01' },
@@ -43,8 +43,8 @@ var albumMarconi = {
    var $albumTitle = $('.album-view-title');
    var $albumArtist = $('.album-view-artist');
    var $albumReleaseInfo = $('.album-view-release-info');
-   var $albumImage = $('album-cover-art');
-   var $albumSongList = $('album-view-song-list');
+   var $albumImage = $('.album-cover-art');
+   var $albumSongList = $('.album-view-song-list');
 
    $albumTitle.text(album.title);
    $albumArtist.text(album.artist);
@@ -120,7 +120,7 @@ var getSongItem = function(element) {
 
 
  window.onload = function() {
-   setCurrentAlbum(albumPicasso)
+   setCurrentAlbum(albumMarconi)
 
    songListContainer.addEventListener('mouseover', function(event){
      if (event.target.parentElement.className === 'album-view-song-item'){
