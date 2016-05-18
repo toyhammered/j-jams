@@ -102,7 +102,7 @@ var nextSong = function(){
 
 	currentlyPlayingSongNumber = currentSongIndex + 1;
 	currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-	
+
 	$('.currently-playing .song-name').text(currentSongFromAlbum.title);
 	$('.currently-playing .artist-name').text(currentAlbum.artist);
 	$('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.title);
@@ -130,7 +130,7 @@ var previousSong = function(){
 
 	currentlyPlayingSongNumber = currentSongIndex + 1;
 	currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-	
+
 	$('.currently-playing .song-name').text(currentSongFromAlbum.title);
 	$('.currently-playing .artist-name').text(currentAlbum.artist);
 	$('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.title);
@@ -159,7 +159,7 @@ var nextSong = function(){
 
 	currentlyPlayingSongNumber = currentSongIndex + 1;
 	currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-	
+
 	$('.currently-playing .song-name').text(currentSongFromAlbum.title);
 	$('.currently-playing .artist-name').text(currentAlbum.artist);
 	$('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.title);
@@ -187,7 +187,7 @@ var nextSong = function(){
 
 	currentlyPlayingSongNumber = currentSongIndex + 1;
 	currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-	
+
 	$('.currently-playing .song-name').text(currentSongFromAlbum.title);
 	$('.currently-playing .artist-name').text(currentAlbum.artist);
 	$('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.title);
@@ -214,7 +214,7 @@ var nextSong = function(){
 
 	currentlyPlayingSongNumber = currentSongIndex + 1;
 	currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-	
+
 	$('.currently-playing .song-name').text(currentSongFromAlbum.title);
 	$('.currently-playing .artist-name').text(currentAlbum.artist);
 	$('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.title);
@@ -228,20 +228,20 @@ var nextSong = function(){
 	$lastSongNumberCell.html(lastSongNumber);
 
 }; 
-	var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
-	var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
-	var playerBarPlayButton = '<span class="ion-play"></span>';
-	var playerBarPauseButton = '<span class="ion-pause"></span>';
+var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
+var playerBarPlayButton = '<span class="ion-play"></span>';
+var playerBarPauseButton = '<span class="ion-pause"></span>';
 
-	var currentAlbum = null;
-	var currentlyPlayingSongNumber = null;
-	var currentSongFromAlbum = null;
+var currentAlbum = null;
+var currentlyPlayingSongNumber = null;
+var currentSongFromAlbum = null;
 
-	var $previousButton = $('.main-controls .previous')
-	var $nextButton = $('.main-controls .next')
+var $previousButton = $('.main-controls .previous')
+var $nextButton = $('.main-controls .next')
 
-	$(document).ready(function() {
-		setCurrentAlbum(albumMarconi)
+$(document).ready(function() {
+	setCurrentAlbum(albumMarconi)
 		$previousButton.click(previousSong);
-		$nextButton.click(nextSong);
-	});
+	$nextButton.click(nextSong);
+});
